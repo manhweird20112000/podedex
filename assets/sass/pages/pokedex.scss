@@ -320,12 +320,58 @@
 
 // Responsive mobile
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .pokemon-wrapper {
+    .pokedex-wrapper {
+        margin: 35px 0 0 0;
         .pokedex__heading {
-            font-size: 2em;
+            padding: 0 35px;
+            font-size: 2.9em;
         }
+        .pokedex__search {
+            margin: 40px 0 20px 0;
+            #pokedex__search {
+                height: 31px;
+                font-size: 1.5em;
+            }
+        }
+        .pokedex__filter {
+            .filter-wrapper {
+                border-radius: 20px;
+                box-shadow: 3px 5px 5px 1px rgba($color: $dark-color, $alpha: 0.1);
+            }
+        }
+        .pokemon {
+            margin: 24px 0 0 0;
+        }
+    }
+    .pokemon__item {
+        width: 100%;
+    }
+    .ataque,
+    .experiencia {
+        display: none
     }
 }
 
 // Responsive tablet
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .pokedex-wrapper {
+        margin: 34px 0 0 0;
+        .pokedex__heading {
+            padding: 0 80px;
+            font-size: 4em;
+        }
+        .pokedex__search {
+            margin: 25px 0 15px 0;
+            #pokedex__search {
+                height: 36px;
+                font-size: 1.5em;
+            }
+        }
+        .pokemon {
+            margin: 62px 0 0 0;
+            .pokemon-wrapper {
+                padding: 0 0 0 10px;
+            }
+        }
+    }
+}
