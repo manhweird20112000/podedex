@@ -1,0 +1,75 @@
+@import '../helper/variables.scss';
+@import '../helper/mixins.scss';
+// legendaries
+.legendaries {
+    background-color: $dark-color;
+    height: 100%;
+}
+
+.legendaries-wrapper {
+    .pokemon-legendaries {
+        .pokemon-legendaries__heading {
+            @include font($primary-font, 5em, $white-color, 400);
+            letter-spacing: 2px;
+            padding: 56px 0 20px 0;
+            border-bottom: 1px solid $white-color;
+        }
+    }
+}
+
+.infomation-pokemon {
+    min-height: 426.76px;
+    max-height: 426.76px;
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    justify-content: space-between;
+    padding: 0 25px 0 0;
+    .infomation-pokemon__image {
+        width: 35%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center
+        }
+    }
+    .infomation-pokemon__info {
+        width: 45%;
+        .infomation-pokemon__name {
+            @include font($primary-font, 5em, $white-color, 400);
+        }
+        .infomation-pokemon__paragraph {
+            @include font($primary-font, 2em, $white-color, 400);
+            margin: 25px 0;
+        }
+        .infomation-pokemon__fight {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .infomation-fight__item {
+                width: 50%;
+                margin-bottom: 30px;
+                p {
+                    @include font($primary-font, 1.8em, $white-color, 400);
+                }
+                .index-fight {
+                    @include font($primary-font, 1.8em, $white-color, 600);
+                    text-align: left;
+                }
+                .indicator-bar {
+                    width: 70%;
+                    height: 7px;
+                    background-color: $white-color;
+                    border-radius: 10px;
+                    .indicator-bar__hide {
+                        width: 60%;
+                        height: 100%;
+                        background-color: $primary-color;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
