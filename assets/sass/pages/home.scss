@@ -20,6 +20,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .menu {
+        .menu-mobile {
+            display: none;
+        }
+    }
 }
 
 .home {
@@ -62,13 +67,14 @@
 
 .home-content__image {
     width: 55%;
-    transform: translateX(50px);
+    transform: translateX(0px);
     svg {
         width: 793px;
         height: 680px;
     }
 }
 
+// Mobile
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .header {
         min-height: 55.8px;
@@ -76,24 +82,30 @@
     .header-wrapper {
         margin: 0 20px;
         .logo {
+            text-align: center;
             svg {
-                width: 58.41px;
-                height: 22px;
+                max-width: 58.41px;
+                max-height: 22px;
             }
         }
         .menu {
             .menu__list {
                 display: none;
             }
+            .menu-mobile {
+                display: block;
+            }
         }
     }
     .home-wrapper {
         .home-content {
+            align-items: center;
+            justify-content: center;
             flex-direction: column-reverse;
             transform: translateY(-30px);
             .home-content__image {
-                transform: translateX(0);
                 width: 100%;
+                text-align: center;
                 svg {
                     width: 375px;
                     height: 287.05px;
@@ -113,6 +125,58 @@
                     width: 80%;
                 }
             }
+        }
+    }
+}
+
+// Tablet
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .header-wrapper {
+        margin: 0 20px;
+        .logo {
+            svg {
+                width: 121px;
+                height: 45px;
+            }
+        }
+        .menu {
+            .menu__list {
+                li {
+                    a {
+                        margin: 0 25px;
+                    }
+                }
+            }
+        }
+    }
+    .home-wrapper {
+        .home-content {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+    .home-content__image {
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50px);
+        svg {
+            width: 706px;
+            height: 539px;
+        }
+    }
+    .home-content__title {
+        width: 100%;
+        padding: 0 40px;
+        text-align: center;
+        transform: translateY(-100px);
+        .home-content__heading {
+            font-size: 8em;
+            b {
+                font-weight: 600;
+            }
+        }
+        .home-content__pragraph {
+            margin: 28px 0 32px 0;
         }
     }
 }
