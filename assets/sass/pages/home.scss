@@ -12,13 +12,107 @@
     background-color: $third-color;
     display: flex;
     align-items: center;
+    box-shadow: 0px 5px 20px 1px rgba($color: $dark-color, $alpha: 0.1);
+    z-index: 9999;
 }
 
 .header-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .menu {
-        position: relative;
+}
+
+.home {
+    min-height: calc(100vh - 93px);
+    max-height: 100%;
+    background: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
+    .home-wrapper {
+        padding: 64px 0;
+        .home-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+.home-content__title {
+    width: 35%;
+    .home-content__heading {
+        @include font($primary-font, 6em, black, 400);
+        letter-spacing: 2px;
+        line-height: 1.2em;
+        b {
+            font-weight: 500;
+        }
+    }
+    .home-content__pragraph {
+        @include font($primary-font, 2.5em, black, 400);
+        line-height: 1.2em;
+        margin: 80px 0 75px 0;
+    }
+    .btn--see {
+        @include font($second-font, 2.3em, $dark-color, 600);
+        padding: 12px 36px;
+        background-color: #73D677;
+        border-radius: 10px;
+        box-shadow: 0 8px 1px -1px #4D8F50;
+    }
+}
+
+.home-content__image {
+    width: 55%;
+    transform: translateX(50px);
+    svg {
+        width: 793px;
+        height: 680px;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .header {
+        min-height: 55.8px;
+    }
+    .header-wrapper {
+        margin: 0 20px;
+        .logo {
+            svg {
+                width: 58.41px;
+                height: 22px;
+            }
+        }
+        .menu {
+            .menu__list {
+                display: none;
+            }
+        }
+    }
+    .home-wrapper {
+        .home-content {
+            flex-direction: column-reverse;
+            transform: translateY(-30px);
+            .home-content__image {
+                transform: translateX(0);
+                width: 100%;
+                svg {
+                    width: 375px;
+                    height: 287.05px;
+                }
+            }
+            .home-content__title {
+                width: 100%;
+                text-align: center;
+                .home-content__heading {
+                    font-size: 4.5em;
+                }
+                .home-content__pragraph {
+                    font-size: 2.5em;
+                    margin: 20px 0 40px 0;
+                }
+                .btn--see {
+                    width: 80%;
+                }
+            }
+        }
     }
 }
