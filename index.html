@@ -9,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/sass/main.scss">
+    <link rel="stylesheet" type="text/x-scss" href="./assets/sass/main.scss">
     <link rel="stylesheet" href="./assets/dist/css/main.css">
     <link rel="stylesheet" href="./assets/sass/dist/css/home.css">
+    <link rel="stylesheet" href="./assets/sass/dist/css/pokedex.css">
 </head>
 
 <body>
@@ -87,7 +88,7 @@
         <!-- Container -->
         <div class="container">
             <!-- Home -->
-            <div class="container__item home">
+            <div class="container__item home ">
                 <div class="grid">
                     <div class="home-wrapper">
                         <div class="home-content">
@@ -180,7 +181,211 @@
 
                 </div>
             </div>
-            <div class="container__item"></div>
+            <!-- Pokedex -->
+            <div class="container__item pokedex active-container">
+                <div class="grid">
+                    <div class="pokedex-wrapper">
+                        <h3 class="pokedex__heading">
+                            800 <b>Pokemons</b> for you do choose your favorite
+                        </h3>
+                        <!-- Search pokedex -->
+                        <div class="pokedex__search">
+                            <input type="text" name="" id="pokedex__search" placeholder="Encuentra tu pokemon...">
+                        </div>
+                        <!-- Filter pokedex -->
+                        <div class="pokedex__filter">
+                            <div class="filter__item tipo">
+                                <div class="filter-wrapper">
+                                    Tipo
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z" fill="currentColor" /></svg>
+                                </div>
+                                <!-- Filter tipo -->
+                                <div class="filter__tipo">
+                                    <div class="filter-wrapper__tipo">
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Bug
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Fairy
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Ghost
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Dark
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Fighting
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Glass
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Dragon
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Fire
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Ground
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Electric
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Flying
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Ice
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Normal
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Poiso
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Psychic
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Rock
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Steel
+                                            </p>
+                                        </div>
+                                        <div class="filter-tipo__item">
+                                            <div class="check">
+                                                <div class="tick"></div>
+                                            </div>
+                                            <p>
+                                                Water
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter__item ataque">
+                                <div class="filter-wrapper">
+                                    Ataque
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z" fill="currentColor" /></svg>
+                                </div>
+                                <div class="filter__ataque ">
+                                    <div class="filter__ataque-wrapper">
+                                        <div class="filter-ataque__item">
+                                            <span>
+                                            From
+                                        </span>
+                                            <input type="text" name="" id="">
+                                        </div>
+                                        <div class="filter-ataque__item">
+                                            <div class="horizontal">
+
+                                            </div>
+                                        </div>
+                                        <div class="filter-ataque__item">
+                                            <span>
+                                            To
+                                        </span>
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter__item">
+                                <div class="filter-wrapper">
+                                    Experiencia
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z" fill="currentColor" /></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container__item"></div>
             <div class="container__item"></div>
         </div>

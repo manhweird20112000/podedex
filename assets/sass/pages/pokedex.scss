@@ -1,0 +1,164 @@
+// Import variable
+@import '../helper/variables.scss';
+// import mixins
+@import '../helper/mixins.scss';
+// Pokedex
+.pokedex {}
+
+.pokedex-wrapper {
+    margin: 80px 0 0 0;
+    .pokedex__heading {
+        @include font($primary-font, 3.5em, black, 400);
+        text-align: center;
+        b {
+            font-weight: 500;
+        }
+    }
+    .pokedex__search {
+        text-align: center;
+        margin: 42px 0 35px 0;
+        #pokedex__search {
+            @include font($primary-font, 2em, black, 400);
+            border: 0;
+            outline: none;
+            width: 80%;
+            height: 53px;
+            padding-left: 25px;
+            background-color: $white-color;
+            border-radius: 25px;
+            box-shadow: 1px 5px 10px 1px rgba($color: $dark-color, $alpha: 0.1);
+        }
+    }
+    .pokedex__filter {
+        display: flex;
+        align-items: center;
+        .filter__item {
+            margin: 0 32px;
+            position: relative;
+        }
+    }
+}
+
+.filter-wrapper {
+    @include font($primary-font, 1.7em, black, 400);
+    min-width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white-color;
+    padding: 2px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 3px 5px -1px rgba($color: $dark-color, $alpha: 0.1);
+    svg {
+        width: 15px;
+        margin: 0 0 0 10px;
+    }
+}
+
+// Filter tipo
+.filter__tipo {
+    @include position('tl', 40px, 0);
+    width: 300px;
+    min-height: 150px;
+    background-color: $white-color;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 1px 3px 5px -1px rgba($color: $dark-color, $alpha: 0.1);
+    display: none;
+    .filter-wrapper__tipo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .filter-tipo__item {
+            display: flex;
+            align-items: center;
+            width: 33.3%;
+            margin: 5px 0;
+            .check {
+                width: 18px;
+                height: 18px;
+                border-radius: 5px;
+                border: 1px solid $dark-color;
+                margin: 0 5px 0 0;
+                position: relative;
+                cursor: pointer;
+                background-color: $dark-color;
+                .tick {
+                    transform: translate(2px, 3px);
+                    // display: none;
+                    &::after {
+                        @include position('tl', 0, 0);
+                        content: " ";
+                        border-width: 6px 2px;
+                        border-style: solid;
+                        border-color: #73D677;
+                        transform: rotate(-45deg);
+                        border-radius: 5px
+                    }
+                    &::before {
+                        @include position('tr', -7px, 3px);
+                        content: " ";
+                        border-width: 10px 2px;
+                        border-style: solid;
+                        border-color: #73D677;
+                        transform: rotate(45deg);
+                        border-radius: 5px
+                    }
+                }
+            }
+            p {
+                @include font($primary-font, 1.5em, $dark-color, 500);
+            }
+        }
+    }
+}
+
+.tipo {
+    &:hover .filter__tipo {
+        display: block;
+    }
+}
+
+// filter ataque
+.filter__ataque {
+    @include position('tl', 40px, 0);
+    background-color: $white-color;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    .filter__ataque-wrapper {
+        display: flex;
+        .filter-ataque__item {
+            span {
+                @include font($primary-font, 1.5em, $dark-color, 500);
+            }
+            input {
+                @include font($primary-font, 1.3em, $dark-color, 500);
+                border: none;
+                outline: none;
+                background-color: white;
+                width: 100px;
+                height: 20px;
+                padding: 0 0 0 10px;
+                border-radius: 10px;
+                margin-top: 5px;
+                box-shadow: 1px 3px 5px 1px rgba($color: $dark-color, $alpha: 0.2);
+            }
+            .horizontal {
+                width: 40px;
+                height: 3px;
+                background-color: $dark-color;
+                margin: 30px 10px 0 10px;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+.ataque {
+    &:hover .filter__ataque {
+        display: block;
+    }
+}
