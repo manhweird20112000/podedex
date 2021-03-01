@@ -1,0 +1,23 @@
+// Import variables
+@import '../helper/variables.scss';
+// import mixins
+@import '../helper/mixins.scss';
+.menu {
+    .menu__list {
+        display: flex;
+        align-items: center;
+        li {
+            a {
+                @include font($primary-font, 2em, $dark-color, 500);
+                text-decoration: none;
+                display: block;
+                padding: 10px 0;
+                margin: 0 35px;
+                border-bottom: 2px solid transparent;
+                &:hover {
+                    border-bottom: 2px solid $dark-color;
+                }
+            }
+        }
+    }
+}
