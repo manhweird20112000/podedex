@@ -73,3 +73,38 @@
         }
     }
 }
+
+.pokemon-slide-wrapper {
+    .card-legendaries {
+        width: 143.21px;
+        height: 180.46px;
+        border-radius: 20px;
+        background: linear-gradient(45deg, #B57E10 -7.62%, #B57E10 13.9%, #F9DF7B 28.5%, #FFF3A6 45.42%, #F9DF7B 62.17%, #B57E10 81.71%);
+        position: relative;
+        .card-legendaries__img {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 6666;
+        }
+        .card-legendaries__info {
+            @include position('bl', 0, 0);
+            width: 100%;
+            height: 52.3px;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            .card-legendaries__name {
+                @include font($primary-font, 1.7em, $dark-color, 500);
+            }
+        }
+    }
+}
