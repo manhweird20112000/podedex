@@ -1,0 +1,17 @@
+// import base
+@import './base/reset.scss';
+@import './base/animation.scss';
+// Import helper
+@import './helper/variables.scss';
+@import './helper/mixins.scss';
+@import './helper/functions.scss';
+// import layout
+@import './layout/app.scss';
+// import component
+@import './components/navbar.scss';
+// import pages
+@import './pages/home.scss';
+@import './pages/pokedex.scss';
+@import './pages/legendaries.scss';
+@import './pages/documentation.scss';
+@import './pages/404.scss';

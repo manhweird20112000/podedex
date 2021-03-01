@@ -1,0 +1,26 @@
+@mixin position($type, $y, $x) {
+    position: absolute;
+    @if($type=='tl') {
+        top: $y;
+        left: $x;
+    }
+    @else if($type=='tr') {
+        top: $y;
+        right: $x;
+    }
+    @else if($type=='bl') {
+        bottom: $y;
+        left: $x;
+    }
+    @else if($type=='lr') {
+        bottom: $y;
+        right: $x;
+    }
+}
+
+@mixin font($family, $size, $color, $weight) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
