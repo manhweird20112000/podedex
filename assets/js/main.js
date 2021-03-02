@@ -1,4 +1,5 @@
 window.addEventListener('load', function() {
+    let pokedex = document.querySelector('.pokemon-slide-wrapper');
     const legendaries = [{
             id: 1,
             name: 'Raikou',
@@ -25,32 +26,32 @@ window.addEventListener('load', function() {
             ]
 
         },
-        {
-            id: 2,
-            name: 'Entei',
-            imfomation: 'Entei embodies the passion of magma. This Pokémon is thought to have been born in the eruption of a volcano. It sends up massive bursts of fire that utterly consume all that they touch.',
-            image: 'https://i.pinimg.com/originals/c5/6a/4c/c56a4c54379e0cabfc70899594ad691b.png',
-            maxbase: {
-                HP: 434,
-                Attack: 361,
-                Defense: 295,
-                SpAttack: 306,
-                SpDefense: 273,
-                Speed: 328
-            },
-            base: {
-                HP: 115,
-                Attack: 115,
-                Defense: 85,
-                SpAttack: 90,
-                SpDefense: 75,
-                Speed: 100
-            },
-            type: [
-                'Fire'
-            ]
+        // {
+        //     id: 2,
+        //     name: 'Entei',
+        //     imfomation: 'Entei embodies the passion of magma. This Pokémon is thought to have been born in the eruption of a volcano. It sends up massive bursts of fire that utterly consume all that they touch.',
+        //     image: 'https://i.pinimg.com/originals/c5/6a/4c/c56a4c54379e0cabfc70899594ad691b.png',
+        //     maxbase: {
+        //         HP: 434,
+        //         Attack: 361,
+        //         Defense: 295,
+        //         SpAttack: 306,
+        //         SpDefense: 273,
+        //         Speed: 328
+        //     },
+        //     base: {
+        //         HP: 115,
+        //         Attack: 115,
+        //         Defense: 85,
+        //         SpAttack: 90,
+        //         SpDefense: 75,
+        //         Speed: 100
+        //     },
+        //     type: [
+        //         'Fire'
+        //     ]
 
-        },
+        // },
         {
             id: 3,
             name: 'Entei',
@@ -181,57 +182,60 @@ window.addEventListener('load', function() {
             ]
 
         },
-        {
-            id: 8,
-            name: 'Dialga',
-            imfomation: 'A Pokémon spoken of in legend. It is said that time began moving when Dialga was born.',
-            image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/483.png',
-            maxbase: {
-                HP: 404,
-                Attack: 372,
-                Defense: 372,
-                SpAttack: 438,
-                SpDefense: 328,
-                Speed: 306
-            },
-            base: {
-                HP: 100,
-                Attack: 120,
-                Defense: 120,
-                SpAttack: 150,
-                SpDefense: 100,
-                Speed: 90
-            },
-            type: [
-                'Steel', 'Dragon'
-            ]
+        // {
+        //     id: 8,
+        //     name: 'Dialga',
+        //     imfomation: 'A Pokémon spoken of in legend. It is said that time began moving when Dialga was born.',
+        //     image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/483.png',
+        //     maxbase: {
+        //         HP: 404,
+        //         Attack: 372,
+        //         Defense: 372,
+        //         SpAttack: 438,
+        //         SpDefense: 328,
+        //         Speed: 306
+        //     },
+        //     base: {
+        //         HP: 100,
+        //         Attack: 120,
+        //         Defense: 120,
+        //         SpAttack: 150,
+        //         SpDefense: 100,
+        //         Speed: 90
+        //     },
+        //     type: [
+        //         'Steel', 'Dragon'
+        //     ]
 
-        },
-        {
-            id: 9,
-            name: 'Uxie',
-            imfomation: 'Known as “The Being of Knowledge.” It is said that it can wipe out the memory of those who see its eyes.',
-            image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/480.png',
-            maxbase: {
-                HP: 35,
-                Attack: 273,
-                Defense: 394,
-                SpAttack: 273,
-                SpDefense: 394,
-                Speed: 317
-            },
-            base: {
-                HP: 75,
-                Attack: 75,
-                Defense: 130,
-                SpAttack: 75,
-                SpDefense: 130,
-                Speed: 95
-            },
-            type: [
-                'Psychic'
-            ]
+        // },
+        // {
+        //     id: 9,
+        //     name: 'Uxie',
+        //     imfomation: 'Known as “The Being of Knowledge.” It is said that it can wipe out the memory of those who see its eyes.',
+        //     image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/480.png',
+        //     maxbase: {
+        //         HP: 35,
+        //         Attack: 273,
+        //         Defense: 394,
+        //         SpAttack: 273,
+        //         SpDefense: 394,
+        //         Speed: 317
+        //     },
+        //     base: {
+        //         HP: 75,
+        //         Attack: 75,
+        //         Defense: 130,
+        //         SpAttack: 75,
+        //         SpDefense: 130,
+        //         Speed: 95
+        //     },
+        //     type: [
+        //         'Psychic'
+        //     ]
 
-        },
+        // },
     ]
+
+
+
 })
