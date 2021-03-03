@@ -10,15 +10,15 @@
         .pokemon-legendaries__heading {
             @include font($primary-font, 5em, $white-color, 400);
             letter-spacing: 2px;
-            padding: 56px 0 20px 0;
+            padding: 40px 0 20px 0;
             border-bottom: 1px solid $white-color;
         }
     }
 }
 
 .infomation-pokemon {
-    min-height: 426.76px;
-    max-height: 426.76px;
+    // min-height: 426.76px;
+    // max-height: 426.76px;
     display: flex;
     align-items: center;
     margin: 50px 0;
@@ -85,37 +85,34 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    .card-legendaries {
-        width: 143.21px;
-        height: 180.46px;
+    .card-pokedex {
+        min-width: 143.21px;
+        min-height: 180.46px;
+        background: linear-gradient(215.78deg, #B59810 -124.09%, #B57E10 -78.76%, #F9DF7B -35.76%, #FFF3A6 8.4%, #F9DF7B 50.24%, #B57E10 99.06%);
         border-radius: 20px;
-        background: linear-gradient(45deg, #B57E10 -7.62%, #B57E10 13.9%, #F9DF7B 28.5%, #FFF3A6 45.42%, #F9DF7B 62.17%, #B57E10 81.71%);
         position: relative;
-        margin: 0 21px;
-        cursor: pointer;
-        .card-legendaries__img {
-            position: absolute;
-            top: -40px;
-            left: 50%;
+        .card-pokedex__img {
+            @include position('tl', -30px, 50%);
             transform: translateX(-50%);
-            width: 180px;
-            height: 100%;
-            background-repeat: no-repeat;
+            width: 200%;
+            height: 180.46px;
             background-size: contain;
-            z-index: 6666;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 8888;
         }
-        .card-legendaries__info {
+        .card-pokedex__info {
             @include position('bl', 0, 0);
             width: 100%;
-            height: 52.3px;
-            background-color: white;
-            border-radius: 20px;
+            background-color: $white-color;
+            min-height: 52.3px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            border-radius: 20px;
             padding: 0 10px;
-            .card-legendaries__name {
-                @include font($primary-font, 1.7em, $dark-color, 500);
+            span {
+                @include font($primary-font, 1.8em, $dark-color, 500);
             }
         }
     }
