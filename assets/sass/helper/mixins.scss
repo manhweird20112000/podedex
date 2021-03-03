@@ -12,7 +12,7 @@
         bottom: $y;
         left: $x;
     }
-    @else if($type=='lr') {
+    @else if($type=='br') {
         bottom: $y;
         right: $x;
     }
