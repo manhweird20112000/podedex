@@ -18,6 +18,9 @@
                     border-bottom: 2px solid $dark-color;
                 }
             }
+            .active-tab {
+                border-bottom: 2px solid black;
+            }
         }
     }
 }
