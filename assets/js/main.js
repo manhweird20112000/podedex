@@ -256,7 +256,7 @@ window.addEventListener('load', function() {
 
     let listPokemon = document.querySelector('.pokemon-wrapper');
     legendaries.forEach((item) => {
-            const template = `<div class="pokemon__item" >
+        const template = `<div class="pokemon__item" >
         <div class="pokemon__info">
             <!-- Name -->
             <h5 class="pokemon__heading">
@@ -298,14 +298,39 @@ window.addEventListener('load', function() {
         </div>
 
     </div>`;
-            listPokemon.insertAdjacentHTML('beforeend', template);
-        })
-        // const newArr = [];
-        // for (let i = 0; i < legendaries.length; i++) {
-        //     newArr.push[legendaries[i].type];
-        //     return newArr;
-        // }
-    console.log(screen.width);
+        listPokemon.insertAdjacentHTML('beforeend', template);
+    })
 
+    let menuMobile = document.querySelector('.menu-mobile');
+    menuMobile.onclick = function(e) {
+        let menu = document.querySelector('.overlay-mobile');
+        let mainMenu = document.querySelector('.mobile');
+
+
+        menu.classList.add('active-menu');
+        setTimeout(() => {
+            mainMenu.classList.add('active-menu-mobile');
+        }, 50);
+        e.preventDefault();
+
+
+    }
+
+    let closeMobileMenu = document.querySelector('.close__menu-mobile');
+    console.log(closeMobileMenu);
+    closeMobileMenu.click = function(e) {
+        let activeOvelay = document.querySelector('.active-menu');
+        let activeMenu = document.querySelector('.active-menu-mobile');
+        activeOvelay.style.display = 'none';
+        activeMenu.classList.remove('active-menu-mobile');
+
+
+    }
+    let closeop = document.querySelector('.close__filter');
+
+    closeop.click = function() {
+        console.log('45');
+
+    }
 
 })

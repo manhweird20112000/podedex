@@ -462,6 +462,10 @@
     }
 }
 
+.filter-mobile {
+    display: none;
+}
+
 // Responsive mobile
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .pokedex-wrapper {
@@ -491,8 +495,15 @@
         width: 100%;
     }
     .ataque,
+    .tipo,
     .experiencia {
         display: none
+    }
+    .filter-mobile {
+        display: block;
+        margin: 0 40px;
+        padding: 7px 0px 7px 10px;
+        cursor: pointer;
     }
     .wrapper-card-pokemon {
         display: none;
