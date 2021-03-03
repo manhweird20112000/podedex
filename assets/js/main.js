@@ -254,5 +254,58 @@ window.addEventListener('load', function() {
 
     })
 
+    let listPokemon = document.querySelector('.pokemon-wrapper');
+    legendaries.forEach((item) => {
+            const template = `<div class="pokemon__item" >
+        <div class="pokemon__info">
+            <!-- Name -->
+            <h5 class="pokemon__heading">
+                ${item.name}
+            </h5>
+            <!-- Fight -->
+            <div class="pokemon__fight">
+                <div class="pokemon-fight__item">
+                    <section>
+
+                        ${item.base.Attack}
+
+                    </section>
+                    <span>
+                        Attack
+                    </span>
+                </div>
+                <div class="pokemon-fight__item">
+                    <section>
+
+                    ${item.base.Defense}
+
+                    </section>
+                    <span>
+                        Defense
+                    </span>
+                </div>
+            </div>
+            <!-- Type -->
+            <div class="pokemon-type">
+                <span class="pokemon-type__item">
+                    ${item.type[0]}
+                </span>
+
+            </div>
+        </div>
+        <div class="pokemon__image">
+            <img src="${item.image}" alt="">
+        </div>
+
+    </div>`;
+            listPokemon.insertAdjacentHTML('beforeend', template);
+        })
+        // const newArr = [];
+        // for (let i = 0; i < legendaries.length; i++) {
+        //     newArr.push[legendaries[i].type];
+        //     return newArr;
+        // }
+    console.log(screen.width);
+
 
 })
