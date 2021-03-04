@@ -75,7 +75,7 @@
 }
 
 .overlay-mobile {
-    display: block;
+    display: none;
 }
 
 // Mobile
@@ -91,7 +91,7 @@
         right: 0;
         background-color: rgba($color: $dark-color, $alpha: 0.2);
         z-index: 9999;
-        // display: none;
+        display: none;
         .mobile {
             background: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
             min-height: 344px;
@@ -105,7 +105,6 @@
             transform: translateY(-100%);
             transition: all 1s ease;
             position: relative;
-            display: none;
             .close__menu-mobile {
                 @include position('tl', 10px, 10px);
                 padding: 10px;

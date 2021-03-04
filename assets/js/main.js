@@ -303,34 +303,37 @@ window.addEventListener('load', function() {
 
     let menuMobile = document.querySelector('.menu-mobile');
     menuMobile.onclick = function(e) {
-        let menu = document.querySelector('.overlay-mobile');
-        let mainMenu = document.querySelector('.mobile');
+            let menu = document.querySelector('.overlay-mobile');
+            let mainMenu = document.querySelector('.mobile');
 
 
-        menu.classList.add('active-menu');
-        setTimeout(() => {
-            mainMenu.classList.add('active-menu-mobile');
-        }, 50);
-        e.preventDefault();
+            menu.classList.add('active-menu');
+            setTimeout(() => {
+                mainMenu.classList.add('active-menu-mobile');
+            }, 50);
+            e.preventDefault();
 
 
-    }
+        }
+        // Call api type
 
-    let closeMobileMenu = document.querySelector('.close__menu-mobile');
-    console.log(closeMobileMenu);
-    closeMobileMenu.click = function(e) {
-        let activeOvelay = document.querySelector('.active-menu');
-        let activeMenu = document.querySelector('.active-menu-mobile');
-        activeOvelay.style.display = 'none';
-        activeMenu.classList.remove('active-menu-mobile');
+    let urlType = 'https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/types.json';
+    fetch(urlType)
+        .then(response => response.json())
+        .then(function(data) {
+            data.forEach((item) => {
+                let temp = `<div class="filter-type__item">
+                <div class="filter-type__check ">
 
+                </div>
+                <span>
+                    ${item.english}
+                </span>
+            </div>`;
 
-    }
-    let closeop = document.querySelector('.close__filter');
-
-    closeop.click = function() {
-        console.log('45');
-
-    }
+                let listType = document.querySelector('.filter-type__list');
+                listType.insertAdjacentHTML('beforeend', temp);
+            })
+        })
 
 })

@@ -627,6 +627,109 @@
             }
         }
     }
+    .filter-pokedex {
+        background: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
+        height: 636px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        padding: 0 20px;
+        display: none;
+        .filter-pokedex__type {
+            border-bottom: 2px solid $white-color;
+            padding: 18px 0 20px 18px;
+            .filter-type__heading {
+                @include font($second-font, 2.5em, $dark-color, 500);
+                margin-bottom: 10px;
+            }
+            .filter-type__list {
+                min-width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                .filter-type__item {
+                    display: flex;
+                    align-items: center;
+                    width: 30%;
+                    margin-bottom: 10px;
+                    .filter-type__check {
+                        width: 15px;
+                        height: 15px;
+                        border: 2px solid $dark-color;
+                        margin: 0 5px 0 0;
+                    }
+                    .active-filter {
+                        background-color: $danger-color;
+                    }
+                    span {
+                        @include font($primary-font, 1.5em, $dark-color, 500);
+                    }
+                }
+            }
+        }
+        .filter-pokedex__experience {
+            padding: 0 18px;
+            .filter-experience__heading {
+                @include font($second-font, 2.5em, $dark-color, 500);
+                margin: 25px 0 8px 0;
+            }
+        }
+    }
+    .filter-experience {
+        width: 100%;
+        background-color: $white-color;
+        border-radius: 10px;
+        padding: 14px;
+        display: flex;
+        margin-bottom: 20px;
+        .filter-experience-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .filter-experience__input {
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+                input {
+                    @include font($second-font, 1.3em, $dark-color, 600);
+                    width: 70%;
+                    height: 20px;
+                    padding-left: 10px;
+                    border: 0;
+                    outline: 0;
+                    background-color: $white-color;
+                    border-radius: 10px;
+                    box-shadow: 1px 3px 5px 1px rgba($color: $dark-color, $alpha: 0.2);
+                }
+                span {
+                    @include font($second-font, 1.6em, $dark-color, 500);
+                }
+            }
+            .horizontal-filter {
+                width: 30px;
+                height: 2px;
+                background-color: $dark-color;
+                margin-top: 15px;
+                margin-left: -20px;
+                margin-right: 10px;
+            }
+            .btn--apply {
+                @include font($second-font, 1.5em, $dark-color, 600);
+                background-color: #73D677;
+                padding: 5px 15px;
+                border-radius: 20px;
+                margin: 12px 0 0 0;
+            }
+        }
+    }
+    .filter-pokedex__attack {
+        border-top: 2px solid $white-color;
+    }
+    .close__filter {
+        text-align: right;
+        padding: 10px 0 0 0;
+    }
 }
 
 // Responsive tablet
