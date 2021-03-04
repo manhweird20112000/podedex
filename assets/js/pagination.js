@@ -4,6 +4,10 @@ let perPage = 9;
 let start = 0;
 let end = perPage;
 
+window.addEventListener('scroll', function() {
+    window.pageYOffset = 0
+})
+
 let next = document.querySelector('.pokedex-next');
 let prev = document.querySelector('.pokedex-prev')
 
@@ -20,6 +24,7 @@ fetch(url)
             }
             start = (currentPage - 1) * perPage;
             end = currentPage * perPage;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
             render(data);
         })
         prev.addEventListener('click', function() {
@@ -30,6 +35,8 @@ fetch(url)
             start = (currentPage - 1) * perPage;
             end = currentPage * perPage;
             render(data);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
         })
     })
     .catch(function(err) {
