@@ -19,10 +19,10 @@ window.addEventListener('load', function() {
 
     })
 
-
+    let menu = document.querySelector('.overlay-mobile');
     let menuMobile = document.querySelector('.menu-mobile');
     menuMobile.onclick = function(e) {
-            let menu = document.querySelector('.overlay-mobile');
+
             let mainMenu = document.querySelector('.mobile');
 
 
@@ -54,5 +54,32 @@ window.addEventListener('load', function() {
                 listType.insertAdjacentHTML('beforeend', temp);
             })
         })
+
+    let mobileMenu = document.querySelector('.mobile')
+    mobileMenu.addEventListener('click', function(event) {
+        if (event.target.closest('.close__menu-mobile')) {
+            let activeMenu = document.querySelector('.active-menu-mobile');
+            let activeOverlay = document.querySelector('.active-menu');
+
+            activeMenu.classList.remove('active-menu-mobile');
+            activeOverlay.classList.remove('active-menu');
+        }
+    })
+
+    let filterMobile = document.querySelector('.filter-mobile');
+    let filterPokedex = document.querySelector('.filter-pokedex');
+
+    filterMobile.addEventListener('click', function() {
+
+
+        menu.classList.add('active-menu');
+        filterPokedex.classList.add('active-filter');
+    })
+    filterPokedex.addEventListener('click', function(event) {
+        if (event.target.closest('.close__filter')) {
+            menu.classList.remove('active-menu');
+            filterPokedex.classList.remove('active-filter');
+        }
+    })
 
 })

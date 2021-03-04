@@ -4,9 +4,6 @@ let perPage = 9;
 let start = 0;
 let end = perPage;
 
-window.addEventListener('scroll', function() {
-    window.pageYOffset = 0
-})
 
 let next = document.querySelector('.pokedex-next');
 let prev = document.querySelector('.pokedex-prev')

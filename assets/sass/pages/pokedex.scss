@@ -484,6 +484,10 @@
     }
 }
 
+.filter-mobile-wrapper {
+    display: block;
+}
+
 .filter-mobile {
     display: none;
 }
@@ -655,6 +659,8 @@
         border-bottom-right-radius: 15px;
         border-bottom-left-radius: 15px;
         padding: 0 20px;
+        position: absolute;
+        top: 0;
         display: none;
         .filter-pokedex__type {
             border-bottom: 2px solid $white-color;
@@ -696,6 +702,9 @@
                 margin: 25px 0 8px 0;
             }
         }
+    }
+    .active-filter {
+        display: block;
     }
     .filter-experience {
         width: 100%;
