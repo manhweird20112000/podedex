@@ -308,13 +308,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px 0 0 0;
-    span {
-        width: 8px;
-        height: 8px;
-        background-color: $dark-color;
-        border-radius: 50%;
-        margin: 5px;
+    padding: 10px 0;
+    .pokedex-prev,
+    .pokedex-next {
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        &:hover {
+            background-color: rgba($color: $dark-color, $alpha: 0.2);
+        }
+    }
+    .pagination-pokedex {
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 0 2px;
+            background-color: rgba($color: $dark-color, $alpha: 0.5);
+            transition: all 0.5s ease;
+        }
+        .active-pagination {
+            width: 12px;
+            border-radius: 5px;
+            background-color: $second-color;
+        }
     }
 }
 
