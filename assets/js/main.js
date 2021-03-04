@@ -82,4 +82,25 @@ window.addEventListener('load', function() {
         }
     })
 
+    let mainMenuMobile = document.querySelector('.mobile__list');
+    mainMenuMobile.querySelectorAll('li a').forEach((tab, index) => {
+        tab.addEventListener('click', function(event) {
+            let activeContainer = document.querySelector('.container__item.active-container');
+            let activeTab = document.querySelector('.active-tab');
+
+            activeContainer.classList.remove('active-container');
+            tabs[index].classList.add('active-container');
+
+            activeTab.classList.remove('active-tab')
+            tab.classList.add('active-tab');
+
+            mobileMenu.classList.remove('active-menu-mobile');
+            menu.classList.remove('active-menu');
+
+            event.preventDefault();
+        })
+
+
+    })
+
 })
