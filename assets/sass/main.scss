@@ -17,3 +17,141 @@
 @import './pages/legendaries.scss';
 @import './pages/documentation.scss';
 @import './pages/404.scss';
+.model-card {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $danger-color;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 9999;
+    display: none;
+    .close-card__model {
+        margin: 17px;
+    }
+}
+
+.model-card__content {
+    position: relative;
+    .card-pokemon__name {
+        @include font($primary-font, 4em, $white-color, 500);
+        margin: 0 27px;
+        text-align: center;
+        margin-top: -20px;
+    }
+    .model-card__img {
+        position: absolute;
+        width: 318px;
+        height: 311px;
+        margin: 8px 27px 0 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        img {
+            width: 80%;
+            height: 311px;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+    .card-pokemon__infomation {
+        width: 100%;
+        background: linear-gradient(180deg, #732119 42.19%, #D93E30 100%);
+        transform: translateY(200px);
+        padding: 110px 11px 0 11px;
+        z-index: 8888;
+        border-radius: 15px;
+    }
+}
+
+.card-pokemon__infomation {
+    .card-pokemon__type {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        span {
+            @include font($primary-font, 1.5em, $dark-color, 500);
+            padding: 5px 10px;
+            background-color: #07D6F2;
+            border-radius: 20px;
+            box-shadow: 0px 3px 1px 0.5px #059db1;
+        }
+    }
+    .card-pokemon__abilities {
+        background-color: $white-color;
+        padding: 22px;
+        border-radius: 10px;
+        margin: 15px 0;
+        p {
+            @include font($second-font, 2.3em, black, 500);
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+        span {
+            @include font($second-font, 1.8em, black, 500);
+        }
+    }
+    .card-pokemon__physical {
+        background-color: $white-color;
+        border-radius: 10px;
+        padding: 17px 20px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-bottom: 15px;
+        .pokemon-physical__item {
+            margin-bottom: 10px;
+            p {
+                @include font($primary-font, 1.6em, black, 400);
+                margin-bottom: 5px
+            }
+            span {
+                @include font($primary-font, 1.8em, black, 500);
+            }
+            .pokemon-physical__bar {
+                width: 100%;
+                height: 8px;
+                background-color: rgba($color: $dark-color, $alpha: 0.2);
+                border-radius: 20px;
+                margin: 5px 0;
+                .bar {
+                    width: 62%;
+                    height: 100%;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+    .card-pokemon__fight {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .pokemon-fight__item {
+            @extend .card-pokemon__fight;
+            flex-direction: column;
+            min-width: 82.2px;
+            min-height: 68.58px;
+            max-width: 82.2px;
+            max-height: 68.58px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 8px;
+            .circle {
+                @include font($primary-font, 1.8em, black, 500);
+                width: 38px;
+                height: 38px;
+                border: 3px solid $dark-color;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 32px;
+            }
+            span {
+                @include font($primary-font, 1.4em, rgb(61, 61, 61), 500);
+                margin-top: 3px;
+            }
+        }
+    }
+}

@@ -115,9 +115,15 @@ function getCards(arr) {
             let overlayPokemon = document.querySelector('.overlay');
             let indexPokedex = card.getAttribute('pokedex') - 1;
 
-            overlayPokemon.classList.add('active-overlay');
-            popupPokemon(arr[indexPokedex]);
+
             console.log(arr[indexPokedex]);
+
+            if (screen.width >= 0 && screen.width <= 480) {
+                popUpMobile(arr[indexPokedex])
+            } else {
+                overlayPokemon.classList.add('active-overlay');
+                popupPokemon(arr[indexPokedex]);
+            }
 
 
 
@@ -240,4 +246,114 @@ function popupPokemon(item) {
         mainPopup.appendChild(toast);
 
     }
+}
+
+
+function popUpMobile(item) {
+    const popUp = document.querySelector('.model-pokemon');
+    if (popUp) {
+        let toast = document.createElement('div');
+        toast.classList.add('model-card');
+        popUp.addEventListener('click', function(event) {
+            if (event.target.closest('.close-card__model')) {
+                popUp.removeChild(toast);
+            }
+        })
+        toast.innerHTML = `
+        <div class="close-card__model">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="35.4683" height="9.21254" rx="3" transform="matrix(0.705326 0.708883 -0.705326 0.708883 6.49841 0.326538)" fill="#212121"/>
+            <rect width="35.4683" height="9.21254" rx="3" transform="matrix(-0.705326 0.708883 -0.705326 -0.708883 31.5145 6.53055)" fill="#212121"/>
+            </svg>
+
+        </div>
+        <div class="model-card__content">
+        <h4 class="card-pokemon__name">
+            ${item.name.english}
+        </h4>
+        <div class="model-card__img">
+            <img src="${item.image}" alt="">
+        </div>
+        <div class="card-pokemon__infomation">
+            <div class="card-pokemon__type">
+                <span>
+                    ${item.type[0]}
+                </span>
+            </div>
+            <div class="card-pokemon__abilities">
+                <p>
+                    Abilities
+                </p>
+                <span>
+                    Overgrow - Chlorophyll
+                </span>
+            </div>
+            <div class="card-pokemon__physical">
+                <div class="pokemon-physical__item">
+                    <p>
+                        Healthy Point
+                    </p>
+                    <span>
+                    ${item.base.HP}
+                    </span>
+                    <div class="pokemon-physical__bar">
+                        <div class="bar" style="background: linear-gradient(270deg, #64D368 0.15%, #64D368 70.88%);">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="pokemon-physical__item">
+                    <p>
+                        Experience
+                    </p>
+                    <span>
+90
+                    </span>
+                    <div class="pokemon-physical__bar">
+                        <div class="bar" style="background: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-pokemon__fight">
+                <div class="pokemon-fight__item">
+                    <div class="circle">
+                        ${item.base.Defense}
+                    </div>
+                    <span>
+                        Defense
+                    </span>
+                </div>
+                <div class="pokemon-fight__item">
+                    <div class="circle">
+                    ${item.base.Attack}
+                    </div>
+                    <span>
+                        Attack
+                    </span>
+                </div>
+                <div class="pokemon-fight__item">
+                    <div class="circle">
+                    ${item.base.SpDefense}
+                    </div>
+                    <span>
+                       Sp.Defense
+                    </span>
+                </div>
+                <div class="pokemon-fight__item">
+                    <div class="circle">
+                    ${item.base.SpAttack}
+                    </div>
+                    <span>
+                        Sp.Attack
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>`;
+
+        popUp.appendChild(toast);
+    }
+
 }
