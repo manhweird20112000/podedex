@@ -297,7 +297,7 @@ function popUpMobile(item) {
                     ${item.base.HP}
                     </span>
                     <div class="pokemon-physical__bar">
-                        <div class="bar" style="background: linear-gradient(270deg, #64D368 0.15%, #64D368 70.88%);">
+                        <div class="bar" style="background: linear-gradient(270deg, #64D368 0.15%, #64D368 70.88%); width:${((item.base.HP) / 150) *100}%">
 
                         </div>
                     </div>
@@ -310,7 +310,7 @@ function popUpMobile(item) {
 90
                     </span>
                     <div class="pokemon-physical__bar">
-                        <div class="bar" style="background: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);">
+                        <div class="bar" style="background: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%); width:${((item.base.Speed) / 200) *100}%">
 
                         </div>
                     </div>
