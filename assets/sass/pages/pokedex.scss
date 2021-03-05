@@ -364,10 +364,6 @@
     justify-content: center;
 }
 
-.wrapper-card-pokemon__mobile {
-    display: none;
-}
-
 .wrapper-card-pokemon {
     // display: block;
     .close-model {
@@ -544,40 +540,6 @@
     }
     .wrapper-card-pokemon {
         display: none;
-    }
-    .wrapper-card-pokemon__mobile {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: #6aa039;
-        display: block;
-        .model-pokemon {
-            position: relative;
-            .close-model {
-                // @include position('tl', 0, 0);
-                margin: 17px 0 0 17px;
-            }
-            .pokemon-card__model {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                .pokemon-card__name {
-                    @include font($primary-font, 4em, $white-color, 700);
-                    text-align: center;
-                }
-                img {
-                    @include position('tl', 58px, 50%);
-                    transform: translateX(-50%);
-                    width: 318px;
-                    height: 277px;
-                    object-fit: cover;
-                    padding: 0 20px;
-                    z-index: 5555;
-                }
-            }
-        }
     }
     .model-infomation {
         width: 100%;

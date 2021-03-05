@@ -118,7 +118,7 @@ function getCards(arr) {
             overlayPokemon.classList.add('active-overlay');
             popupPokemon(arr[indexPokedex]);
             console.log(arr[indexPokedex]);
-            popupPokemonMobile(arr[indexPokedex])
+
 
 
         })
@@ -137,7 +137,6 @@ function popupPokemon(item) {
                 clearTimeout()
             }
         })
-
 
         let overlayPokemon = document.querySelector('.overlay');
         toast.classList.add('wrapper-card-pokemon');
@@ -237,117 +236,8 @@ function popupPokemon(item) {
                             </div>
 
         </div>`;
+
         mainPopup.appendChild(toast);
 
-    }
-}
-
-
-
-function popupPokemonMobile(item) {
-    if (mainPopup) {
-        let popUpMobile = document.createElement('div');
-
-        popUpMobile.classList.add('wrapper-card-pokemon__mobile');
-
-        popupPokemon.innerHTML = `
-        <div class="model-pokemon">
-        <div class="close-model">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="35.4683" height="9.21254" rx="3" transform="matrix(0.705326 0.708883 -0.705326 0.708883 6.5 0.328125)" fill="#212121"/>
-            <rect width="35.4683" height="9.21254" rx="3" transform="matrix(-0.705326 0.708883 -0.705326 -0.708883 31.5156 6.53125)" fill="#212121"/>
-            </svg>
-
-        </div>
-        <div class="pokemon-card__model">
-            <h5 class="pokemon-card__name">
-                ${item.name.english}
-            </h5>
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/640.png" alt="" srcset="">
-            <div class="model-infomation">
-
-                <div class="pokemon-model__type">
-                    <span class="pokemon-model-type__item">
-                           ${item.type[0]}
-                        </span>
-                </div>
-
-                <div class="pokemon-model__abilities">
-                    <p class="model-abilities__title">
-                        Abilities
-                    </p>
-                    <p class="model-abilities__content">
-                        Justified
-                    </p>
-                </div>
-                <div class="model-power">
-                    <div class="model-power__item">
-                        <p class="model-power__heading">
-                            Healthy Points
-                        </p>
-                        <p class="model-power__score">
-                        ${item.base.HP}
-                        </p>
-                        <div class="model-power__bar">
-                            <div class="bar" style="background-color: #6aa039;">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="model-power__item">
-                        <p class="model-power__heading">
-                            Experience
-                        </p>
-                        <p class="model-power__score">
-                            90
-                        </p>
-                        <div class="model-power__bar">
-                            <div class="bar" style="background-color: #f2b807;">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="model-fight">
-                    <div class="model-fight__item">
-                        <div class="model-fight__circle">
-                        ${item.base.Attack}
-                        </div>
-                        <p class="model-fight__title">
-                            Attack
-                        </p>
-                    </div>
-                    <div class="model-fight__item">
-                        <div class="model-fight__circle">
-                        ${item.base.Defense}
-                        </div>
-                        <p class="model-fight__title">
-                            Defense
-                        </p>
-                    </div>
-                    <div class="model-fight__item">
-                        <div class="model-fight__circle">
-                        ${item.base.SpAttack}
-                        </div>
-                        <p class="model-fight__title">
-                            Sp.Attack
-                        </p>
-                    </div>
-                    <div class="model-fight__item">
-                        <div class="model-fight__circle">
-                        ${item.base.SpDefense}
-                        </div>
-                        <p class="model-fight__title">
-                            Sp.Defense
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>`;
-
-        mainPopup.appendChild(popUpMobile);
     }
 }
