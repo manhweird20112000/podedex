@@ -97,6 +97,8 @@ window.addEventListener('load', function() {
             mobileMenu.classList.remove('active-menu-mobile');
             menu.classList.remove('active-menu');
 
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
             event.preventDefault();
         })
 
