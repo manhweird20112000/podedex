@@ -104,5 +104,27 @@ window.addEventListener('load', function() {
 
 
     })
+    activeFilter('.tipo', '.filter__tipo');
+    activeFilter('.ataque', '.filter__ataque ');
+    activeFilter('.experiencia', '.filter__experiencia');
+
+    let filterType = document.querySelectorAll('.check');
+    filterType.forEach((filter) => {
+        filter.addEventListener('click', function(event) {
+            let tick = document.createElement('div');
+            tick.classList.toggle('tick');
+            filter.appendChild(tick);
+        })
+    })
+
+
+    function activeFilter(selector1, selector2) {
+        let btnFilter = document.querySelector(selector1);
+        let filter = document.querySelector(selector2);
+        btnFilter.addEventListener('click', function() {
+            filter.classList.toggle('active-filter');
+        })
+
+    }
 
 })
