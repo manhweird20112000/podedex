@@ -7,7 +7,8 @@ fetch('https://raw.githubusercontent.com/manhweird20112000/pokemon/master/pokede
         return dataType;
     })
     .then(function(data) {
-        getTypePokemon(data)
+        let p = getTypePokemon(data);
+
     })
 
 function getTypePokemon(arr) {
