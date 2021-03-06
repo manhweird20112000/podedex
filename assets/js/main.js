@@ -117,6 +117,18 @@ window.addEventListener('load', function() {
         })
     })
 
+    let seePokemon = document.querySelector('.btn--see');
+    console.log(seePokemon);
+
+    seePokemon.addEventListener('click', function() {
+        let tabPokedex = document.querySelector('.pokedex');
+        let activeTimes = document.querySelector('.active-container');
+
+
+        activeTimes.classList.remove('active-container')
+        tabPokedex.classList.add('active-container');
+    })
+
 
     function activeFilter(selector1, selector2) {
         let btnFilter = document.querySelector(selector1);
