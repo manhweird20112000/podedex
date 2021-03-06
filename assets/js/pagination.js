@@ -296,6 +296,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     function popUpMobile(item) {
         const popUp = document.querySelector('.model-pokemon');
+        let typePokemon = popUpType(item)
         if (popUp) {
             let toast = document.createElement('div');
             toast.classList.add('model-card');
@@ -321,9 +322,7 @@ window.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="card-pokemon__infomation">
                 <div class="card-pokemon__type">
-                    <span>
-                        ${item.type[0]}
-                    </span>
+                ${typePokemon.join('')}
                 </div>
                 <div class="card-pokemon__abilities">
                     <p>
