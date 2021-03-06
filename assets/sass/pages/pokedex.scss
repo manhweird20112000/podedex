@@ -275,9 +275,7 @@
             @include font($primary-font, 1.5em, $dark-color, 500);
             .pokemon-type__item {
                 padding: 2px 8px;
-                background: #76aadb;
                 border-radius: 20px;
-                box-shadow: 0px 4px 1px -1px #4b78a3;
                 margin-right: 5px;
             }
         }

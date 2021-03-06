@@ -56,6 +56,51 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
         let htmls = '';
+
+        let typePokemon = arr.map((item) => {
+            return item.type;
+        })
+        let type = typePokemon.map((item) => {
+            let typeHandle = [];
+            for (let i = 0; i < item.length; i++) {
+
+                switch (true) {
+                    case ['Stile', 'Dark', 'Rock'].includes(item[i]):
+                        typeHandle.push(`<span class="pokemon-type__item" style="background-color: #A1A1A1; box-shadow: 0px 4px 1px -1px #464646;">${item[i]}</span>`);
+                        break;
+                    case ['Grass', 'Bug'].includes(item[i]):
+                        typeHandle.push(`<span class="pokemon-type__item" style="background-color: #70A83B; box-shadow: 0px 4px 1px -1px #3f5f21;">${item[i]}</span>`);
+                        break;
+                    case ['Ice', 'Water'].includes(item[i]):
+                        typeHandle.push(`<span class="pokemon-type__item" style="background-color: #A2CFF0; box-shadow: 0px 4px 1px -1px #7897ad;">${item[i]}</span>`);
+                        break;
+                    case ['Fire', 'Fighting', 'Dragon'].includes(item[i]):
+                        typeHandle.push(`<span class="pokemon-type__item"  style="background-color: #F76545;box-shadow: 0px 4px 1px -1px #be4f36;">${item[i]}</span>`);
+                        break;
+                    case ['Normal', 'Gosth'].includes(item[i]):
+                        typeHandle.push(`<span class="pokemon-type__item" style="background-color: #76AADB;box-shadow: 0px 4px 1px -1px #517ca5;">${item[i]}</span>`);
+                        break;
+                    case ['Poison', 'Psychic', 'Fairy', 'Ghost'].includes(item[i]):
+                        typeHandle.push(`<span class="pokemon-type__item" style="background-color: #A974BC; box-shadow: 0px 4px 1px -1px #7c588a">${item[i]}</span>`);
+                        break;
+                    case ['Ground'].includes(item[i]):
+                        typeHandle.push(`<span class="pokemon-type__item" style="background-color: #9B897B ;box-shadow: 0px 4px 1px -1px #645a52">${item[i]}</span>`);
+                        break;
+                    case ['Electric'].includes(item[i]):
+                        typeHandle.push(`<span class="pokemon-type__item" style="background-color: #F7C545; box-shadow: 0px 4px 1px -1px #d3a227">${item[i]}</span>`);
+                        break;
+                    default:
+                        typeHandle.push(`<span class="pokemon-type__item" style="background-color: #3dc7ef; box-shadow: 0px 4px 1px -1px #2c88a1">${item[i]}</span>`);
+                        break;
+
+                }
+
+            }
+            return typeHandle;
+
+        })
+        console.log(type[0].join(''));
+
         arr.map((item, index) => {
             if (index >= start && index < end) {
                 htmls += `<div class="pokemon__item" pokedex="${item.id}" >
@@ -89,10 +134,9 @@ window.addEventListener('DOMContentLoaded', function() {
             </div>
             
             <div class="pokemon-type">
-                <span class="pokemon-type__item">
-                    ${item.type[0]}
-                </span>
-
+               
+                ${type[index].join('')}
+               
             </div>
             </div>
             <div class="pokemon__image">
